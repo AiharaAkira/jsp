@@ -1,0 +1,33 @@
+html : 웹사이트 제작 가능
+---------------------디자인, 기능적 한계
+
+HTML : 뼈대
+CSS : 디자인
+JS : 기능, 이벤트
+-------------------- 프로그래밍 언어 JAVA
+
+servlet(server + Applet(application))
+자바 프로그램
+
+사용자 요청을 하면 HTML + CSS + JS 를 만들어내는 프로그램
+단순 Web Server 에서는 실행이 안됨
+WAS에서 실행 (infinity free)
+
+네이버 카페 24
+
+내컴퓨터를 WAS로 
+node.js
+django
+..
+tomcat
+
+Web Application Server
+프로그램 실행 기능 추가된 웹서버
+
+톰캣 WAS : 8080
+	IT바닥의 약속
+	웹서비스 : 80
+
+localhost : 80
+port 번호 : 용도에 맞는 문	
+

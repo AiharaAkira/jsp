@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	처음 한번만 실행 (서버 실행)
+	소스 수정 - 저장 - 브라우저에서 새로고침
+	------------------------------
+	톰캣이 버그가 있을때(안될때)
+	1. 실행 다시
+	2. 브라우저의 캐시 비우고 새로고침 ->ctrl + shift + r
+	
+	
+</body>
+</html>
