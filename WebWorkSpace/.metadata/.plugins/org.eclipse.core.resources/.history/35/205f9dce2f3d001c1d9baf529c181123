@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="Checkbox">
+		<input type="checkbox" name="c">가
+		<input type="checkbox" name="c">나
+		<input type="checkbox" name="c">다
+		<input type="checkbox" name="c">라
+	</form>
+</body>
+</html>

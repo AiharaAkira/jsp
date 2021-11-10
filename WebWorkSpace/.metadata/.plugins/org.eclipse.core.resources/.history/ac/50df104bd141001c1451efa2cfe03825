@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%!
+		public double inchCal(double cm){
+		return Math.floor(cm * 0.393701*10)/10.0 ;
+	}
+	public double widthCal(double m){
+		return Math.floor((m * 0.3025)*10)/10.0;
+	}
+	public double cCal(double f){
+		return Math.ceil(((f -32)*5/9)*10)/10.0;
+	}
+	public double kmCal(double km){
+		return Math.floor((km * 0.621371)*10)/10.0;
+	}
+	%>
+	
+	<%
+	double result = 0;
+	String result2 = String.format("%.1f", result);
+	String danwi1="";
+	String danwi2="";
+	double uInput = Double.parseDouble(request.getParameter("uInput"));
+	String unit = request.getParameter("unit");
+	
+	if(unit.equals("cm")){
+		result = (uInput* 0.393701);
+		danwi1="cm";
+		danwi2="inch";
+	}else if(unit.equals("m")){
+		result = (uInput* 0.3025);
+		danwi1="m2";
+		danwi2="평";
+	}else if(unit.equals("f")){
+		result = ((uInput-32)*5/9);
+		danwi1="F";
+		danwi2="C";
+	}else if(unit.equals("km")){
+		result = (uInput* 0.621371);
+		danwi1="km/h";
+		danwi2="mi/h";
+	}
+	
+	%>
+	<!--  ⏬ -->
+	
+		
+		<div style="height: auto; width: 98%; border:5px solid black; margin:5px 5px; text-align:center; color:orange; font-weight:bold; font-size:25px;"> 
+		<div id="title" style="height: auto; width: 96%; border:5px solid black; margin:5px auto; background-color:orange; font-size:30px; color:white; ">변환결과</div>
+		<div id="result" style="width: 96%; font-size:30px; color:orange;">
+			<%=uInput%> <%=danwi1%> 
+			<br><br><br>
+			⏬⏬⏬
+			<br><br><br>
+			<%= result2 %> <%=danwi2%> 
+			</div>
+			</div>
+		
+		
+</body>
+</html>

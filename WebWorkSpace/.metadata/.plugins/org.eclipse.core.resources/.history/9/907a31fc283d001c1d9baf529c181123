@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="oddEven">
+	<input name="userNum">
+	<button>홀짝🎴🎴</button>
+	</form>
+	<a href="oddEven.html"></a>
+</body>
+</html>

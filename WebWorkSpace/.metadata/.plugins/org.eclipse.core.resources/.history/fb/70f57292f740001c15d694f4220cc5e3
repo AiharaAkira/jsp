@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- form에 입력한 데이터를 실어 보내야 됨 
+ 톰켓이 알아서 인코딩(글자만)
+ 톰켓이 알아서 디코딩(글자만)
+ -->
+</body>
+</html>

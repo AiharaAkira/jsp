@@ -13,7 +13,6 @@ servlet(server + Applet(application))
 단순 Web Server 에서는 실행이 안됨
 WAS에서 실행 (infinity free)
 
-네이버 카페 24
 
 내컴퓨터를 WAS로 
 node.js

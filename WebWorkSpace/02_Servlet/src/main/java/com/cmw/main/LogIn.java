@@ -18,7 +18,7 @@ public class LogIn extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		response.setCharacterEncoding("euc-kr");
+		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
 		
 		String id = "cmw";
@@ -28,7 +28,7 @@ public class LogIn extends HttpServlet {
 		
 		out.print("<html>");
 		out.print("<head>");
-		out.print("<meta charset=\"euc-kr\">");
+		out.print("<meta charset=\"utf-8\">");
 		out.print("</head>");
 		out.print("<body>");
 		
@@ -49,11 +49,12 @@ public class LogIn extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//포스트방식 한글 처리할때 
-		request.setCharacterEncoding("utf-8");
-		
 		
 		response.setCharacterEncoding("euc-kr");
+		//포스트방식 한글 처리할때 
+		request.setCharacterEncoding("euc-kr");
+		
+		
 		PrintWriter out = response.getWriter();
 		
 		String id = "cmw";

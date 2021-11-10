@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	jsp(java server page(programing))(java servlet page)
+	Html베이스에다가 자바코드를 넣는 형태로 작업 -> 서블릿 노가다 보다 작업이 편해짐
+	톰캣이 서블릿으로 바꿔서 실행
+ -->
+ 
+ <%
+ 	int a = 10+20;
+ %>
+ <h1><%= a%></h1>
+ 
+ <form action="o.jsp">
+ x : <input>
+ y : <input>
+ <button>계산</button>
+ </form>
+ 
+</body>
+</html>

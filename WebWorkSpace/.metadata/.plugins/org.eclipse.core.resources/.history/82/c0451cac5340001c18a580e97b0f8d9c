@@ -1,0 +1,57 @@
+package com.cmw.main;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/reg")
+public class reg extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+	
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		response.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("utf-8");
+		PrintWriter out = response.getWriter();
+		String name = request.getParameter("name");
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String gender = request.getParameter("gender");
+		String adress = request.getParameter("adress");
+		String[] fav= request.getParameterValues("fav");
+		String intro = request.getParameter("introduce");
+		
+		
+		
+		out.print("<html>");
+		out.print("<head>");
+		out.print("<meta charset=\"utf-8\">");
+		out.print("</head>");
+		out.print("<body>");
+		
+		out.print("<h1>"+name+"</h1>");
+		out.print("<h1>"+id+"</h1>");
+		out.print("<h1>"+pw+"</h1>");
+		out.print("<h1>"+gender+"</h1>");
+		out.print("<h1>"+adress+"</h1>");
+		for (String s : fav) {
+			out.printf("<b style=\"font-size:30px\"> %s </b>",s);
+		}
+		out.print("<hr><h1>"+intro+"</h1><br>");		
+		out.print("</body>");
+		out.print("</html>");
+	}
+	
+	}
+
+

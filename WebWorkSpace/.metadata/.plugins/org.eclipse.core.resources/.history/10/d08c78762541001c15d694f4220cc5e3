@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%!
+		public double inchCal(double cm){
+		return cm * 0.393701;
+	}
+	public double widthCal(double m){
+		return m * 0.3025;
+	}
+	public double cCal(double f){
+		return f * -17.222222;
+	}
+	public double kmCal(double km){
+		return km * 0.621371;
+	}
+	%>
+	
+	<%
+	double uInput = Double.parseDouble(request.getParameter("uInput"));
+	String unit = request.getParameter("unit");
+	%>
+	<!--  ⏬ -->
+	<div style="height: auto; width: 98%; border:5px solid black; margin:5px 5px; text-align:center; color:green; font-weight:bold; font-size:25px;"> 
+		<div id="title" style="height: auto; width: 96%; border:5px solid black; margin:5px 5px; background-color:green; font-size:30px; color:white; ">변환결과</div>
+		<div id="result" style="width: 96%; font-size:30px; color:green;">
+		
+		<%=uInput%> cm
+		<br><br><br>
+		⏬⏬⏬
+		br><br><br>
+		<%if(unit.equals("cm")){
+			%>
+			<%= inchCal(uInput) %>
+		<% }%>
+		</div>
+		
+		
+	</div>
+</body>
+</html>

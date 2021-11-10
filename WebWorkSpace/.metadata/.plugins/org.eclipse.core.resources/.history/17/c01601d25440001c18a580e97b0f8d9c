@@ -1,0 +1,88 @@
+package com.cmw.main;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/reg")
+public class reg extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+	
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		response.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("utf-8");
+		PrintWriter out = response.getWriter();
+		String name = request.getParameter("name");
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String gender = request.getParameter("gender");
+		String adress = request.getParameter("adress");
+		String[] fav= request.getParameterValues("fav");
+		String intro = request.getParameter("introduce");
+		
+		
+		
+		out.print("<html>");
+		out.print("<head>");
+		out.print("<meta charset=\"utf-8\">");
+		out.print("</head>");
+		out.print("<body>");
+		
+		out.print("<table border=\"1\" style=\"text-align:center; background-color:gray; color:white; border-radius:5px\" >\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td colspan=\"2\">회원가입</td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td>이름</td><td><input name=\"name\" style=\"border-radius:5px\"></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td>아이디</td><td><input name=\"id\" style=\"border-radius:5px\"></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td>비밀번호</td><td><input type=\"password\" name=\"pw\" style=\"border-radius:5px\"></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td>성별</td><td>남<input type=\"radio\" name=\"gender\" value=\"Man\">\r\n"
+				+ "								여<input type=\"radio\" name=\"gender\" value=\"Women\"></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td>주소</td>\r\n"
+				+ "				<td><select name=\"adress\">\r\n"
+				+ "				<option  value=\"서울\">서울</option>\r\n"
+				+ "				<option  value=\"경기\">경기</option>\r\n"
+				+ "				<option  value=\"부산\">부산</option>\r\n"
+				+ "				</select></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td>관심사</td><td>요리<input type=\"checkbox\" name=\"fav\" value=\"요리\">\r\n"
+				+ "				게임<input type=\"checkbox\" name=\"fav\" value=\"게임\">\r\n"
+				+ "				공부<input type=\"checkbox\" name=\"fav\" value=\"공부\">\r\n"
+				+ "				운동<input type=\"checkbox\" name=\"fav\" value=\"운동\"></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td>자기소개</td>\r\n"
+				+ "				<td><textarea name=\"introduce\" style=\"border-radius:5px\"></textarea></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			<tr>\r\n"
+				+ "				<td colspan=\"2\"><button>가입하기</button></td>\r\n"
+				+ "			</tr>\r\n"
+				+ "			\r\n"
+				+ "		</table>");		
+		out.print("</body>");
+		out.print("</html>");
+	}
+	
+	}
+
+

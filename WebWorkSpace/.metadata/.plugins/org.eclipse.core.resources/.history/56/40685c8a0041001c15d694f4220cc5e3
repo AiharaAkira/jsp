@@ -1,0 +1,48 @@
+package com.cm.fu;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+
+
+@WebServlet("/FileUpload")
+public class FileUpload extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		//1. 사용자가 보냊준 파일을 저장할 폴더 경로(절대경로로 써야함)
+		String path = request.getSession().getServletContext().getRealPath("img");
+		System.out.println(path);
+		
+		MultipartRequest mr = new MultipartRequest(request, path);
+		
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		PrintWriter out = response.getWriter();
+		
+		out.print("<html>");
+		out.print("<head>");
+		out.print("<meta charset=\"utf-8\">");
+		out.print("</head>");
+		out.print("<body>");
+		
+		
+		out.print("</body>");
+		out.print("</html>");
+	}
+	}
+
+

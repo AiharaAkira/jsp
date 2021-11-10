@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="Calc">
+	x: <input name="x"><p>
+		<input type="radio" name="c" value="+">+
+		<input type="radio" name="c" value="-">-
+		<input type="radio" name="c" value="*">*
+		<input type="radio" name="c" value="/">/ 
+		<p>
+	y: <input name="y"><p>
+	<button>사칙연산 결과보기</button>
+	</form>
+	
+</body>
+</html>

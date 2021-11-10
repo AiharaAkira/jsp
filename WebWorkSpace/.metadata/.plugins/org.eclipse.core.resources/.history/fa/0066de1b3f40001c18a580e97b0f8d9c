@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="reg" method="post">
+		<table border="1">
+			<tr>
+				<td colspan="2">회원가입</td>
+			</tr>
+			<tr>
+				<td>이름</td><td><input name="name"></td>
+			</tr>
+			<tr>
+				<td>아이디</td><td><input name="id"></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td><td><input type="password" name="pw"></td>
+			</tr>
+			<tr>
+				<td>성별</td><td>남<input type="radio" value="Man">
+								여<input type="radio" value="Women"></td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><select>
+				<option value="서울">
+				<option value="경기">
+				<option value="부산">
+				</select></td>
+			</tr>
+			<tr>
+				<td>관심사</td><td>요리<input type="checkbox" value="요리">
+				게임<input type="checkbox" value="게임">
+				공부<input type="checkbox" value="공부">
+				운동<input type="checkbox" value="운동"></td>
+			</tr>
+			<tr>
+				<td><input></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button>가입하기</button></td>
+			</tr>
+			
+		</table>
+	</form>
+</body>
+</html>

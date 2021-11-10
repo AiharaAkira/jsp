@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	//값 받기
+	int x = Integer.parseInt(request.getParameter("x")); 
+	int y = Integer.parseInt(request.getParameter("y"));
+	
+	int hab = x+y;
+	int cha = x-y;
+	
+	public int getGon(int a, int b){
+		return a * b;
+	}
+%>
+
+<h1><%= x %> + <%= y %> = <%= hab %></h1>
+<h1><%= x %> - <%= y %> = <%= cha %></h1>
+</body>
+</html>

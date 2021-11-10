@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- form에 입력한 데이터를 실어 보내야 됨 
+ 		톰켓이 알아서 인코딩(글자만)
+	 	톰켓이 알아서 디코딩(글자만)
+ 		
+ 		기존의 톰캣 방식(비닐 포장) 인코딩으로는 파일처리가 안 됨.
+ 		그래서 다른방식(박스 포장) 인코딩 필요.(.jar 필요함)
+ 								남이 만들어 놓은거 갖다 쓰자
+ 								
+ 		http://www.servlets.com
+ 		공식사이트는 아니고 oreilly라는 출판사가 운영하는 사이트
+ 		
+ 		자바 .jar						
+ 		
+ -->
+</body>
+</html>

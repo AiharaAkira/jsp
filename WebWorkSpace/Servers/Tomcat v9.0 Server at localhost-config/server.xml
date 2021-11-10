@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="00_WebBasic" path="/00_WebBasic" reloadable="true" source="org.eclipse.jst.jee.server:00_WebBasic"/><Context docBase="01_Servlet" path="/01_Servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_Servlet"/><Context docBase="01_Servlet_reg" path="/01_Servlet_reg" reloadable="true" source="org.eclipse.jst.jee.server:01_Servlet_reg"/></Host>
+      <Context docBase="00_WebBasic" path="/00_WebBasic" reloadable="true" source="org.eclipse.jst.jee.server:00_WebBasic"/><Context docBase="01_Servlet" path="/01_Servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_Servlet"/><Context docBase="01_Servlet_reg" path="/01_Servlet_reg" reloadable="true" source="org.eclipse.jst.jee.server:01_Servlet_reg"/><Context docBase="02_ContextName" path="/" reloadable="true" source="org.eclipse.jst.jee.server:02_ContextName"/><Context docBase="02_Servlet" path="/02_Servlet" reloadable="true" source="org.eclipse.jst.jee.server:02_Servlet"/><Context docBase="02_InputOutput" path="/02_InputOutput" reloadable="true" source="org.eclipse.jst.jee.server:02_InputOutput"/><Context docBase="04_FileUpload" path="/04_FileUpload" reloadable="true" source="org.eclipse.jst.jee.server:04_FileUpload"/><Context docBase="05_JSP" path="/05_JSP" reloadable="true" source="org.eclipse.jst.jee.server:05_JSP"/><Context docBase="20_JSP_Test_danwi" path="/20_JSP_Test_danwi" reloadable="true" source="org.eclipse.jst.jee.server:20_JSP_Test_danwi"/></Host>
     </Engine>
   </Service>
 </Server>
