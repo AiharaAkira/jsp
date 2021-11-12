@@ -11,16 +11,19 @@
 }
 
 .input{
+	width:70%;
 	font-size: 20px;
-	width:90%;
 	border-radius: 5px;	
 }
 
 .tdText{
-	
+	width:30%;
+	padding: 5px;
+	margin: 5px;
 	color: white;
 	font-weight: bold;
 	border-radius: 5px;
+	height: 60px;
 }
 
 
@@ -29,10 +32,10 @@
 	
 	padding: 5px;
 	background-color: inherit;
-	border: 2px solid white;
+	border: 2px solid #FFC686;
 	
 	
-	width: 40%;
+	width: 30%;
 	
 	margin:0 auto;
 	text-align:center;
@@ -42,8 +45,8 @@
 
 #title{
 	border-radius: 5px;
-	color:black;
-	background-color: white;
+	color:white;
+	background-color: #FFC686;
 	
 }
 
@@ -59,12 +62,12 @@
 }
 
 #bg{
-	background-size:100% 1000px;
+	background-size:100% 1100px;
 	font-family: 'Nanum Pen Script', cursive;
 	font-size: 40px;
     font-weight:bold;
     height:100%;
     background-repeat: no-repeat;
-	background-color: black;
-	background-image: url('https://cdn.imweb.me/upload/S202002259d2c4f16c33cd/678615a937902.jpg');
+	
+	background-image: url('https://pbs.twimg.com/media/Er1UN-3UwAAppUV?format=jpg&name=large');
 }
