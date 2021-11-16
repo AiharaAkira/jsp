@@ -1,0 +1,28 @@
+<%@page import="com.cmw.main.Result"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>잔돈 계산</h1>
+	<table>
+		<tr>
+			<td>상품가격 : <%=request.getParameter("p") %> </td>
+		</tr>
+		<tr>
+			<td>지불한 돈 : <%=request.getParameter("m") %></td>
+		</tr>
+		<tr>
+			<td> 잔돈 : <%=request.getAttribute("ex") %> </td>
+		</tr>
+		<tr>
+			<td> <%=request.getAttribute("say") %></td>
+		</tr>
+	</table>
+</body>
+</html>
