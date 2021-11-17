@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- request
+	2.<form>속에 <btn>클릭 - get, post
+	사용자의 입력들을 편하게 받을 수 있음
+ -->
+ 
+ <a href="second.jsp?a=10&b=20">aaa</a>
+<form action="second.jsp">
+	a <input name="a">
+	b <input name="b">
+	<button>계산하기</button>
+</form>
+</body>
+</html>

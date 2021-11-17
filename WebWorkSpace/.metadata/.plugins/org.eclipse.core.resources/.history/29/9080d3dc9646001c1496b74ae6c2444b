@@ -1,0 +1,12 @@
+package com.cmw.main;
+
+//M(model) - 비즈니스 로직
+// 계산, DB 
+
+public class M {
+
+	public static void main(String[] args) {
+
+	}
+
+}

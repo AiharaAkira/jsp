@@ -7,7 +7,6 @@ public class Result {
 	private String say;
 	
 	public Result() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	

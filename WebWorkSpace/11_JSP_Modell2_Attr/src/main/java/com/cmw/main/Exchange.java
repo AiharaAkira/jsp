@@ -8,10 +8,9 @@ public class Exchange {
 		//값 받기
 		int p = Integer.parseInt(request.getParameter("p"));
 		int m = Integer.parseInt(request.getParameter("m"));
-		int ex = 0;
+		int ex = m-p;
 		String say = null;
 		if(p < m) {
-			ex = m - p;
 			say = "잔돈 여기 있습니다 ~";
 		}else if(p > m) {
 			say = "돈이 모자른데요?";

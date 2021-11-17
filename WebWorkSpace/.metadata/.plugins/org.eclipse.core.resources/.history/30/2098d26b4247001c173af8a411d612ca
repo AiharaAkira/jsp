@@ -1,0 +1,19 @@
+package com.cmw.main;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class NoMoneyCal(HttpServletRequest request) {
+	
+	int p = Integer.parseInt(request.getParameter("p"));
+	int m = Integer.parseInt(request.getParameter("m"));
+	
+	int
+	
+	
+
+}
+
+public static int cal(HttpServletRequest request) {
+	
+	
+}

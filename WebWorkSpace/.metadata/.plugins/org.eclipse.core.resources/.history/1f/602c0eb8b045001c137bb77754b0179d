@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>회원가입</h1>
+	
+	<form action="" name="myForm">
+	필수입력:	<input name="i1" placeholder="필수입력, 3글자 이상, 한글x">
+	글자수:	<input name="">
+	</form>
+</body>
+</html>

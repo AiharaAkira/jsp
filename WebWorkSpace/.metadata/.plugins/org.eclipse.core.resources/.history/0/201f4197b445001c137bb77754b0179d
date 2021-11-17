@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>회원가입</h1>
+	
+	<form action="" name="myForm" onsubmit="call();">
+	필수입력:	<input name="i1" placeholder="필수입력, 3글자 이상, 한글x"><p>
+	글자수:	<input name="i2" placeholder="3자이상, 10글자까지">
+	<hr>
+	비번:	<input name="i3" placeholder="5글자이상, 대문자, 숫자포함"><p>
+	비번일치:	<input name="i4" placeholder="비번일치"><p>
+	숫자: 	<input name="i5" placeholder="숫자만, 공백x"><p>
+	</form>
+</body>
+</html>

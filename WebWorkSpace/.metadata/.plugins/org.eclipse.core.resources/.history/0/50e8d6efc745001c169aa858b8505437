@@ -1,0 +1,38 @@
+function call(){
+    let i1Input = document.myForm.i1;
+    let i2Input = document.myForm.i2;
+    let i3Input = document.myForm.i3;
+    let i4Input = document.myForm.i4;
+    let i5Input = document.myForm.i5;
+
+    if(isEmpty(i1Input) || lessThan(i1Input, 3)){
+        alert('필수입력 에러');
+
+        i1Input.focus();
+        i1Input.value = "";
+        return false;
+    }
+
+    // if(lessThan(i1Input, 3)){
+    //     alert('글자수 확인');
+
+    //     i1Input.focus();
+    //     i1Input.value = "";
+    //     return false;
+    // }
+
+    if(lessThan(i2Input, 3) || moreThan(i2Input, 10)){
+        alert('3글자 이상 입력');
+        i2Input.focus();
+        i2Input.value="";
+        return false;
+    }
+
+    if(lessThan(i3Input, 5) || onlyNumber(i3Input) || upperCase(i3Input)){
+        alert('비밀번호 확인');
+        i3Input.focus();
+        i3Input.value = "";
+        return false;
+    }
+
+}

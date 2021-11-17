@@ -1,0 +1,9 @@
+package com.cmw.main;
+
+public class NoMoneyCal {
+
+	public static void cal() {
+		
+	}
+
+}

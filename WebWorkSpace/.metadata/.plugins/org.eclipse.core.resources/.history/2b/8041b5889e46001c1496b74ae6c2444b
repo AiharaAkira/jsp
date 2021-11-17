@@ -1,0 +1,10 @@
+package com.cmw.main;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class Exchange {
+
+	public static void calc(HttpServletRequest request) {
+		
+	}
+}

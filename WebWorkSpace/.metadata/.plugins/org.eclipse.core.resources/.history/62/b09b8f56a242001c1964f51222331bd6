@@ -1,0 +1,99 @@
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<%
+	request.setCharacterEncoding("utf-8");
+	response.setCharacterEncoding("utf-8");
+	//파일경로
+/*  String path = request.getSession().getServletContext().getRealPath("img");
+	
+	
+	MultipartRequest mr = 
+	new MultipartRequest(request, path, 30 * 1024 * 1024, "utf-8", new DefaultFileRenamePolicy());
+
+	//파일 업로드 
+	String photo = mr.getFilesystemName("photo");
+	System.out.print(photo);*/
+	String name = request.getParameter("name");
+	double height = Double.parseDouble(request.getParameter("height"));
+	String heightR = String.format("%.1f", height);
+	double weight = Double.parseDouble(request.getParameter("weight"));
+	String weightR = String.format("%.1f", weight);
+	double bmi = bmiCalcul(height, weight);
+	String bmiR = String.format("%.2f", bmi);
+	String result = result(bmi);
+	%>
+
+	<%!public double bmiCalcul(double height, double weight) {
+		if (height < 10) {
+			height = height * 100;
+		}
+		height = height * 0.01;
+		return (weight / (height * height));
+	}
+
+	public String result(double bmi) {
+		if (bmi >= 25) {
+			return "비만";
+		} else if (bmi >= 23) {
+			return "과체중";
+		} else if (bmi >= 18.5) {
+			return "정상";
+		} else {
+			return "저체중";
+		}
+	}%>
+
+	<form action="index.html" method="post">
+		<table border="1">
+			<tr>
+				<td colspan="2">BMI 결과</td>
+			</tr>
+			<tr>
+				<td>사진</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><%=name%></td>
+			</tr>
+			<tr>
+				<td>키</td>
+				<td><%=heightR%></td>
+			</tr>
+			<tr>
+				<td>체중</td>
+				<td><%=weightR%></td>
+			</tr>
+			<tr>
+				<td>BMI</td>
+				<td><%=bmiR%></td>
+			</tr>
+			<tr>
+				<td>결과</td>
+				<td><%=result%></td>
+			</tr>
+
+
+			<tr>
+				<td colspan="2"><button>돌아가기</button></td>
+			</tr>
+
+		</table>
+	</form>
+
+
+</body>
+</html>

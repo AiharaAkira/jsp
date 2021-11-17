@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	function call() {
+		let a = document.getElementById('i1');
+		//alert(a.value);
+		
+		let b = document.myForm.n1;
+		alert(b.value);
+	}
+</script>
+	
+	<form action="" name="myForm">
+		<input id ="i1" name="n1">
+	</form>
+		<button onclick="call()">버튼</button>
+</body>
+</html>

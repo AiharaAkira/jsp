@@ -1,0 +1,18 @@
+package com.cmw.main;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class NoMoneyCal {
+	 
+	public static void cal(HttpServletRequest request) {
+		
+		int p = Integer.parseInt(request.getParameter("p"));
+		int m = Integer.parseInt(request.getParameter("m"));
+				
+		int moreM = Math.abs(m-p);
+		String say = "돈이 더 필요하세요~";
+		Result2 r2 = new Result2(p, m, moreM, say);
+		request.setAttribute("rr2", r2);
+	}
+
+}

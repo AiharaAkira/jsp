@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bmi계산기</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+
+function call(){
+	let input1 = document.getElementById("input1");
+	let input2 = document.getElementById("input2");
+	let input3 = document.getElementById("input3");
+	
+	if(input1.value == ""){
+		alert('정보를 입력하세요!');
+		input1.focus();
+		input1.value == "";
+		
+		return false;
+		
+		}
+	
+	if(input2.value == ""){
+		alert('정보를 입력하세요!');
+		input2.focus();
+		input2.value == "";
+		
+		return false;
+		
+		}
+	
+	if(input3.value == ""){
+		alert('정보를 입력하세요!');
+		input3.focus();
+		input3.value == "";
+		
+		return false;
+		
+		}
+	
+	return true;
+	}
+
+
+	
+	
+	
+</script>
+</head>
+<body id="bg">
+<div id="all">
+	<form id="outline" action="bmiCal.jsp" method="post" enctype="multipart/form-data" onsubmit="return call();">
+		<table  id="form">
+			<tr>
+				<td colspan="2" id="title">BMI검사</td>
+			</tr>
+			<tr>
+				<td class="tdText"> <div class="tdString">이름</div></td><td><input placeholder="이름을 입력해 주세요" id="input1" class="input" name="name" ></td>
+			</tr>
+			<tr>
+				<td class="tdText"><div class="tdString">키</div></td><td><input placeholder="키를 입력해 주세요" id="input2" class="input" name="height" ></td>
+			</tr>
+			<tr>
+				<td class="tdText"><div class="tdString">체중</div></td><td><input placeholder="체중을 입력해 주세요" id="input3" class="input" type="text" name="weight" ></td>
+			</tr>
+			
+			<tr>
+				<td class="tdText"><div class="tdString">사진</div></td><td><input type="file" name="photo" ></td>
+			</tr>
+			
+			
+			<tr>
+				<td colspan="2"><button id="btn">계산하기 <img src="https://ac-p.namu.la/20210618/7a16723cc78882fd8823c0d6900882fa75d31f8df88a2dcd1a2e5b067ca8406b.webp?type=orig" width="40px"></button></td>
+			</tr>
+			
+		</table>
+	</form>
+</div>
+	
+</body>
+</html>

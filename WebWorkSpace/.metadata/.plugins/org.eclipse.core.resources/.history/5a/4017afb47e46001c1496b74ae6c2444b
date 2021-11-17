@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	int a = Integer.parseInt(request.getParameter("a"));
+	int b = Integer.parseInt(request.getParameter("b"));
+
+	int hab = a + b;
+	
+	/*
+		값
+		(1) parameter
+		html 에서 만든 값
+		그자료형 String, String[]
+		그런 값이 request 객체에 실려서 전송
+		
+		
+		
+	*/
+	%>
+	<h1>second page</h1>
+	a+b=<%=hab%>
+	
+	
+</body>
+</html>

@@ -1,0 +1,8 @@
+package com.cmw.main;
+
+public class Result {
+	private int price;
+	private int money;
+	private int exchange;
+	private String say;
+}
