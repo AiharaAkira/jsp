@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+
+
+
+function pwCheck(input1, input2) {
+	return	!(input1.value == input2.value)
+}
+
+
+function call() {
+	
+	let pw = document.getElementById('pw');
+	let pwOk = document.getElementById('pwOk');
+	
+		if(pwCheck(pw, pwOk)){
+			alert("비밀번호를 확인해 주세요.");
+			pw.value="";
+			pwOk.value="";
+			pw.focus();
+			
+			return false;
+		}
+		return true;
+}
+
+</script>
+	<form action="LoginController" method="post" onsubmit="return call();">
+	<table>
+		<tr>
+			<td>이름: <input name="name"> </td>
+		</tr>
+		<tr>
+			<td>아이디: <input name="id"> </td>
+		</tr>
+		<tr>
+			<td>비밀번호: <input name="pw" id="pw"> </td>
+		</tr>
+		<tr>
+			<td>비밀번호 확인: <input name="pwOk" id="pwOk"> </td>
+		</tr>
+		<tr>
+			<td> <button>확인</button> </td>
+		</tr>
+	</table>
+	
+	</form>
+</body>
+</html>
