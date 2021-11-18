@@ -29,7 +29,6 @@
 		2.forward
 		//first에서 second로 넘어올때 요청한 정보를 third까지 넘겨줌
 	*/
-	//response.sendRedirect("third.jsp");
 	RequestDispatcher rd = request.getRequestDispatcher("third.jsp");
 	rd.forward(request, response);
 	//이건 쓰는 코드 
