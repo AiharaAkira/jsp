@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-		<h1>잔돈 계산3</h1>
-		<h1>${param.how}원 모자르네요</h1>
-		<h1>${how}원 모자르네요</h1>
+<h1>HOME!!</h1>
 </body>
 </html>
