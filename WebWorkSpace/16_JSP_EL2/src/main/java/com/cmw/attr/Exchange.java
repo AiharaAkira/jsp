@@ -25,7 +25,8 @@ public class Exchange {
 		
 		// 위에 처럼 필요한 것들을 따로 실어서 보내도 되는데 
 		// 한데 뭉쳐서 보내는거.(객체)
-		
+		int how = Math.abs(m-p);
+		request.setAttribute("how", how);
 		Result r = new Result(p, m, ex, say);
 		request.setAttribute("rr", r);
 		

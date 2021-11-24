@@ -27,7 +27,7 @@
 	
 -->
 <h1>firstpage</h1>
-redirect는 표준 액션태그에 없음 : forward로 처리
+redirect는 표준 액션ㅊㄹ)태그에 없음 : forward로 처리
 <jsp:forward page="second.jsp"></jsp:forward>
 </body>
 </html>

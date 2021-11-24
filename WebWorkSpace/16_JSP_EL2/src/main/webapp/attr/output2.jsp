@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,10 +25,9 @@
 	</table>
 	버튼을 눌렀을때 output3.jsp
 	1.모자를 때만 나오게
-	2.모자른 금액을 안내
+	2.모자른 금액을 안내<p>${how}원</p>
 	<c:if test="${rr.price > rr.money}">
-	<c:set var="how" value="${rr.price - rr.money}" />
-
+	
 	<a href="attr/output3.jsp?how=${how} ">
 	<button>얼마 모자른데요?</button>
 	</a>

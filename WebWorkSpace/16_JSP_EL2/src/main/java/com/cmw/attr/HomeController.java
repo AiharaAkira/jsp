@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HomeController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("attr/index.html").forward(request, response);
+		request.getRequestDispatcher("attr/home.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
