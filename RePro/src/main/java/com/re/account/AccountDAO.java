@@ -13,7 +13,7 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.re.home.DBManager;
 
 public class AccountDAO {
-	
+
 	public static void signUp(HttpServletRequest request) throws UnsupportedEncodingException {
 		request.setCharacterEncoding("UTF-8");
 		Connection con = null;
@@ -35,15 +35,13 @@ public class AccountDAO {
 			String u_profileImg = mr.getFilesystemName("u_profileImg");
 			String u_typeOfManager = mr.getParameter("u_typeOfManager");
 
-
-
 			pstmt.setString(1, u_id);
 			pstmt.setString(2, u_pw);
 			pstmt.setString(3, u_name);
 			pstmt.setString(4, u_nickName);
 			pstmt.setString(5, u_profileImg);
 			pstmt.setString(6, u_typeOfManager);
-			
+
 			if (pstmt.executeUpdate() == 1) {
 
 				System.out.println("등록 성공");
@@ -75,7 +73,7 @@ public class AccountDAO {
 		}
 
 	}
-	
+
 	public static void login(HttpServletRequest request) throws UnsupportedEncodingException {
 		request.setCharacterEncoding("UTF-8");
 		String userId = request.getParameter("u_id");
@@ -112,7 +110,7 @@ public class AccountDAO {
 					System.out.println("비밀번호 오류");
 				}
 			} else {
-				
+
 				System.out.println("존재하지 않는 회원");
 			}
 
@@ -133,15 +131,12 @@ public class AccountDAO {
 	}
 
 	public static void update(HttpServletRequest request) throws UnsupportedEncodingException {
-		
+
 		request.setCharacterEncoding("UTF-8");
-		
+
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		
-		
-		
-		
+
 		try {
 			con = DBManager.connect();
 
@@ -149,13 +144,11 @@ public class AccountDAO {
 			MultipartRequest mr = new MultipartRequest(request, path, 30 * 1024 * 1024, "utf-8",
 					new DefaultFileRenamePolicy());
 
-			String sql = "update account set u_pw=?, u_name=?, u_nickName=?, u_profileImg=? "
-					+ " where u_id=?";
-			
-			if(mr.getFilesystemName("u_profileImg") == null) {
-				
-				sql = "update account set u_pw=?, u_name=?, u_nickName=?"
-						+ "where u_id=?";
+			String sql = "update account set u_pw=?, u_name=?, u_nickName=?, u_profileImg=? " + " where u_id=?";
+
+			if (mr.getFilesystemName("u_profileImg") == null) {
+
+				sql = "update account set u_pw=?, u_name=?, u_nickName=?" + "where u_id=?";
 				pstmt = con.prepareStatement(sql);
 
 				String u_id = mr.getParameter("u_id");
@@ -163,24 +156,23 @@ public class AccountDAO {
 				String u_name = mr.getParameter("u_name");
 				String u_nickName = mr.getParameter("u_nickName");
 
-
 				pstmt.setString(1, u_pw);
 				pstmt.setString(2, u_name);
 				pstmt.setString(3, u_nickName);
 				pstmt.setString(4, u_id);
-				
+
 				if (pstmt.executeUpdate() == 1) {
 
 					System.out.println("수정 성공");
 				} else {
 					System.out.println("수정 실패");
 				}
-				
+
 				DBManager.close(con, pstmt, null);
-				
+
 				return;
 			}
-			
+
 			pstmt = con.prepareStatement(sql);
 
 			String u_id = mr.getParameter("u_id");
@@ -199,7 +191,7 @@ public class AccountDAO {
 			pstmt.setString(3, u_nickName);
 			pstmt.setString(4, u_profileImg);
 			pstmt.setString(5, u_id);
-			
+
 			if (pstmt.executeUpdate() == 1) {
 
 				System.out.println("수정 성공");
@@ -212,11 +204,47 @@ public class AccountDAO {
 		} finally {
 			DBManager.close(con, pstmt, null);
 		}
-		
-	}
-	
-	
-	
 
-	
+	}
+
+	public static void delete(HttpServletRequest request) throws UnsupportedEncodingException {
+
+		request.setCharacterEncoding("UTF-8");
+
+		Connection con = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			con = DBManager.connect();
+
+			String sql = "delete from account where u_id = ? and u_name = ? and  u_nickName = ?";
+
+			pstmt = con.prepareStatement(sql);
+
+			String u_id = request.getParameter("u_id");
+			String u_name = request.getParameter("u_name");
+			String u_nickName = request.getParameter("u_nickName");
+
+			System.out.println(u_id);
+			System.out.println(u_name);
+			System.out.println(u_nickName);
+			pstmt.setString(1, u_name);
+			pstmt.setString(2, u_nickName);
+			pstmt.setString(3, u_id);
+
+			if (pstmt.executeUpdate() == 1) {
+
+				System.out.println("삭제 성공");
+			} else {
+				System.out.println("삭제 실패");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("db 서버오류");
+		} finally {
+			DBManager.close(con, pstmt, null);
+		}
+
+	}
+
 }
