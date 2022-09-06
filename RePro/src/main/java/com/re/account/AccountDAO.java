@@ -30,18 +30,20 @@ public class AccountDAO {
 
 			String u_id = mr.getParameter("u_id");
 			String u_pw = mr.getParameter("u_pw");
+			String u_pwR = SHA256.encodeSha256(u_pw);
 			String u_name = mr.getParameter("u_name");
 			String u_nickName = mr.getParameter("u_nickName");
 			String u_profileImg = mr.getFilesystemName("u_profileImg");
 			String u_typeOfManager = mr.getParameter("u_typeOfManager");
 
 			pstmt.setString(1, u_id);
-			pstmt.setString(2, u_pw);
+			pstmt.setString(2, u_pwR);
 			pstmt.setString(3, u_name);
 			pstmt.setString(4, u_nickName);
 			pstmt.setString(5, u_profileImg);
 			pstmt.setString(6, u_typeOfManager);
 
+			
 			if (pstmt.executeUpdate() == 1) {
 
 				System.out.println("등록 성공");
@@ -78,6 +80,7 @@ public class AccountDAO {
 		request.setCharacterEncoding("UTF-8");
 		String userId = request.getParameter("u_id");
 		String userPw = request.getParameter("u_pw");
+		String userPwR = SHA256.encodeSha256(userPw);
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -91,7 +94,7 @@ public class AccountDAO {
 			if (rs.next()) {
 				String dbPW = rs.getString("u_pw");
 
-				if (userPw.equals(dbPW)) {
+				if (userPwR.equals(dbPW)) {
 
 					AccountVO a = new AccountVO();
 					a.setU_id(rs.getString("u_id"));
@@ -153,10 +156,11 @@ public class AccountDAO {
 
 				String u_id = mr.getParameter("u_id");
 				String u_pw = mr.getParameter("u_pw");
+				String u_pwR = SHA256.encodeSha256(u_pw);
 				String u_name = mr.getParameter("u_name");
 				String u_nickName = mr.getParameter("u_nickName");
 
-				pstmt.setString(1, u_pw);
+				pstmt.setString(1, u_pwR);
 				pstmt.setString(2, u_name);
 				pstmt.setString(3, u_nickName);
 				pstmt.setString(4, u_id);
@@ -177,16 +181,13 @@ public class AccountDAO {
 
 			String u_id = mr.getParameter("u_id");
 			String u_pw = mr.getParameter("u_pw");
+			String u_pwR = SHA256.encodeSha256(u_pw);
 			String u_name = mr.getParameter("u_name");
 			String u_nickName = mr.getParameter("u_nickName");
 			String u_profileImg = mr.getFilesystemName("u_profileImg");
 
-			System.out.println(u_id);
-			System.out.println(u_pw);
-			System.out.println(u_name);
-			System.out.println(u_profileImg);
-			System.out.println(u_nickName);
-			pstmt.setString(1, u_pw);
+			
+			pstmt.setString(1, u_pwR);
 			pstmt.setString(2, u_name);
 			pstmt.setString(3, u_nickName);
 			pstmt.setString(4, u_profileImg);
@@ -225,9 +226,6 @@ public class AccountDAO {
 			String u_name = request.getParameter("u_name");
 			String u_nickName = request.getParameter("u_nickName");
 
-			System.out.println(u_id);
-			System.out.println(u_name);
-			System.out.println(u_nickName);
 			pstmt.setString(1, u_name);
 			pstmt.setString(2, u_nickName);
 			pstmt.setString(3, u_id);

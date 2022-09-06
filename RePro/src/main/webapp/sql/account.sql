@@ -11,4 +11,8 @@ u_date date not null
 
 insert into account values('아이디', '비번', '이름', '닉네임', '사진.jpg', '0', sysdate);
 
+--암호화를 위한 비밀번호 최대값변경
+
+ALTER TABLE account MODIFY(u_pw varchar2(1000char));
+
 select * from account;
